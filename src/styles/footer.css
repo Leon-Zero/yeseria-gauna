@@ -1,0 +1,26 @@
+/* componente footer, siguiendo el patrón del navbar */
+@layer utilities {
+  .footer {
+    @apply text-center py-4 px-6;
+    background: var(--color-warm-300);
+    color: var(--color-bg-100);
+  }
+
+  .dark .footer {
+    background: var(--color-dark-100);
+    color: var(--color-primary-100);
+  }
+
+  .footer-container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .footer-text {
+    @apply text-sm md:text-base;
+  }
+
+  .footer-highlight {
+    @apply font-semibold;
+    color: var(--color-primary-200);
+  }
+}

@@ -4,44 +4,37 @@ import { FaFacebookF, FaInstagram, FaWhatsapp, FaTiktok } from "react-icons/fa";
 
 export default function ContactSection() {
   return (
-    <section
-      id="contact-section"
-      className=" bg-blue-500 py-12 px-6 relative z-20 transition-colors duration-300  dark:bg-gray-900"
-    >
-      <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-12">
+    <section id="contact-section" className="contact-section">
+      <div className="contact-container">
         {/* Formulario */}
-        <div className="md:w-2/3">
-          <h2 className="text-2xl font-bold mb-4 text-gray-700">
-            ¡Contáctame!
-          </h2>
-          <p className="mb-6 text-gray-700 dark:text-gray-300">
+        <div className="contact-left">
+          <h2 className="contact-title">¡Contáctame!</h2>
+          <p className="contact-desc">
             Completa el formulario y te responderé lo antes posible.
           </p>
+
           <ContactForm />
 
-          <p className="mt-6 text-sm text-gray-600 dark:text-gray-50">
-            💡 Esta página la desarrollé yo mismo.
-            Si alguna marca de materiales como <strong>Durlock</strong>, <strong>Saint Gobain</strong> o <strong>Mapei</strong> quiere auspiciarme, ¡me encantaría trabajar juntos! 🙌
-          </p>
+          {/* <p className="contact-note">
+            💡 Esta página la desarrollé yo mismo. Si alguna marca de materiales
+            como <strong>Durlock</strong>, <strong>Saint Gobain</strong> o{" "}
+            <strong>Mapei</strong> quiere auspiciarme, ¡me encantaría trabajar
+            juntos! 🙌
+          </p> */}
         </div>
 
         {/* Redes Sociales */}
-        <div className="md:w-1/3 flex flex-col items-center md:items-start">
-          <h3 className="text-xl font-semibold mb-4 text-blue-700">
-            Redes Sociales
-          </h3>
-          <p className="mb-2 text-gray-700 dark:text-gray-50 ">
-            Sígueme o envíame un mensaje:
-          </p>
-          <ul className="flex flex-col gap-4 text-lg  dark:text-gray-50">
+        <div className="contact-right">
+          <h3 className="contact-subtitle">Redes Sociales:</h3>
+          <ul className="contact-list">
             <li>
               <a
                 href="https://www.facebook.com/emanuel.gauna"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
+                className="contact-item"
               >
-                <FaFacebookF className="text-blue-500 dark:text-blue-400 text-2xl" /> Facebook
+                <FaFacebookF className="contact-icon" /> facebook
               </a>
             </li>
             <li>
@@ -49,9 +42,9 @@ export default function ContactSection() {
                 href="https://www.instagram.com/lemagauna/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-pink-500 dark:hover:text-pink-400 transition-colors"
+                className="contact-item"
               >
-                <FaInstagram className="text-pink-500 dark:text-pink-400 text-2xl" /> Instagram
+                <FaInstagram className="contact-icon" /> instagram
               </a>
             </li>
             <li>
@@ -59,9 +52,9 @@ export default function ContactSection() {
                 href="https://wa.me/5491164371277"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-green-500 dark:hover:text-green-400 transition-colors"
+                className="contact-item"
               >
-                <FaWhatsapp className="text-green-500 dark:text-green-400 text-2xl" /> WhatsApp
+                <FaWhatsapp className="contact-icon" /> whatsapp
               </a>
             </li>
             <li>
@@ -69,9 +62,9 @@ export default function ContactSection() {
                 href="https://www.tiktok.com/@yeseria.gauna?lang=es-419"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-black transition-colors"
+                className="contact-item"
               >
-                <FaTiktok className="text-black text-2xl" /> TikTok
+                <FaTiktok className="contact-icon" /> tikTok
               </a>
             </li>
           </ul>

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "./nav";
+@import "./footer";
+@import "./contact";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
