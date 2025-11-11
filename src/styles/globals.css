@@ -3,6 +3,7 @@
 @import "./footer";
 @import "./contact";
 @import "./stickybtn";
+@import "./gallery";
 
 @custom-variant dark (&:where(.dark, .dark *));
 

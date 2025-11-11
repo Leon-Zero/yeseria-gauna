@@ -1,0 +1,86 @@
+.gallery-section {
+  @apply grid grid-cols-12 py-12 px-0 transition-colors duration-300 box-border;
+  background-color: var(--color-bg-200);
+}
+
+.dark .gallery-section {
+  background-color: var(--color-dark-400);
+}
+
+.gallery-block {
+  @apply mb-12 col-start-2 col-end-12;
+}
+
+.gallery-title {
+  @apply text-3xl font-bold mb-6 text-center transition-colors duration-200;
+  color: var(--color-primary-600);
+}
+
+.dark .gallery-title {
+  color: var(--color-primary-400);
+}
+
+.gallery-swiper {
+  @apply w-full;
+}
+
+.gallery-card {
+  @apply block rounded-lg shadow-lg overflow-hidden transition-transform duration-200;
+  background-color: var(--color-bg-100);
+  box-shadow: 0 8px 20px rgba(7, 11, 14, 0.06);
+}
+
+.dark .gallery-card {
+  background-color: var(--color-dark-700);
+}
+
+.gallery-card:hover {
+  box-shadow: 0 18px 40px rgba(7, 11, 14, 0.12);
+}
+
+.gallery-image {
+  @apply relative w-full overflow-hidden;
+  padding-top: 56.25%;
+  background-color: var(--color-bg-200);
+}
+
+@media (min-width: 640px) {
+  .gallery-image {
+    padding-top: calc(100% / (4 / 3));
+  }
+}
+
+.gallery-image img {
+  @apply absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300;
+  transform: none;
+}
+
+.gallery-card:hover .gallery-image img {
+  transform: scale(1.05);
+}
+
+.gallery-caption {
+  @apply text-center font-semibold py-2;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-bg-100);
+}
+
+.dark .gallery-caption {
+  background-color: var(--color-dark-300);
+  color: var(--color-primary-100);
+}
+
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  @apply max-w-full;
+  box-sizing: border-box;
+}
+
+.gallery-card,
+.gallery-image,
+.gallery-caption {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
