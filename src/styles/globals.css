@@ -2,13 +2,16 @@
 @import "./nav";
 @import "./footer";
 @import "./contact";
+@import "./stickybtn";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* * {
   outline: red dashed 1px;
 } */
-
+body {
+  background-color: var(--color-bg-100);
+}
 @theme {
   /*  Primary  */
   --color-primary-100: #e2f6ff;
