@@ -58,25 +58,20 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-blue-800 dark:bg-gray-900 text-white p-4 sticky top-0 z-50 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo / Inicio */}
-        <div className="flex items-center gap-2">
-          <Link href="/" passHref>
+    <nav className="nav">
+      <div className="nav-container">
+        {/* Logo */}
+        <div className="nav-logo">
+          <Link href="/">
             <img
               src="/yesero.jpg"
               alt="Logo Yesería Gauna"
-              className="w-8 h-8 object-contain rounded-full"
+              className="nav-img"
             />
           </Link>
-          <Link href="/" className="text-2xl font-bold hover:text-blue-300 transition">
+          <Link href="/" className="nav-link">
             Inicio
           </Link>
-        </div>
-
-        {/* Switch de Modo Oscuro */}
-        <div className="hidden md:block">
-          <ThemeSwitch />
         </div>
 
         {/* Botón móvil */}
@@ -85,39 +80,34 @@ export default function Navbar() {
           <button
             onClick={toggleMenu}
             aria-label="Abrir menú"
-            className="text-white focus:outline-none text-3xl"
+            className="btn-toggle"
           >
             ☰
           </button>
         </div>
 
         {/* Menú */}
-        <ul
-          className={`md:flex md:items-center md:gap-4 absolute md:static bg-blue-800 dark:bg-gray-900 w-full md:w-auto left-0 md:left-auto transition-all duration-300 ${
-            isOpen ? "top-16" : "top-[-500px]"
-          }`}
-        >
+        <ul className={`nav-menu ${isOpen ? "top-16" : "top-[-500px]"}`}>
           {menuItems.map((item, idx) => {
             const isActive = item.path && router.pathname === item.path;
             return (
-              <li key={idx} className="relative md:mx-2 group border-b rounded-lg md:border-none  dark:bg-gray-700">
-                {item.sub.length > 0 ? (
+              <li key={idx} className="nav-item">
+                {item.sub?.length > 0 ? (
                   <>
                     <button
-                      className="w-full text-left px-4 py-2 hover:bg-blue-700 dark:hover:bg-gray-700 rounded flex justify-between items-center transition"
+                      className="nav-button"
                       onClick={() => toggleSubmenu(item.label)}
                       aria-expanded={openSubmenu === item.label}
                     >
                       {item.label} ▾
                     </button>
 
-                    {/* Submenu escritorio */}
-                    <ul className="hidden md:absolute md:top-full md:left-0 md:bg-blue-700 dark:md:bg-gray-800 md:shadow-lg md:rounded md:group-hover:block">
+                    {/* Submenú escritorio */}
+                    <ul className="nav-submenu">
                       {item.sub.map((sub, i) => (
                         <li key={i}>
                           <Link
                             href={sub.path}
-                            className="block px-4 py-2 hover:bg-blue-600 dark:hover:bg-gray-700 rounded transition"
                             onClick={() => setIsOpen(false)}
                           >
                             {sub.label}
@@ -126,14 +116,14 @@ export default function Navbar() {
                       ))}
                     </ul>
 
-                    {/* Submenu móvil */}
+                    {/* Submenú móvil */}
                     {openSubmenu === item.label && (
-                      <ul className="md:hidden bg-blue-700 dark:bg-gray-800 w-full shadow-lg rounded">
+                      <ul className="nav-submenu-mobile">
                         {item.sub.map((sub, i) => (
                           <li key={i}>
                             <Link
                               href={sub.path}
-                              className="block px-6 py-2 hover:bg-blue-600 dark:hover:bg-gray-700 rounded transition"
+                              className="nav-subitem"
                               onClick={() => setIsOpen(false)}
                             >
                               {sub.label}
@@ -144,18 +134,13 @@ export default function Navbar() {
                     )}
                   </>
                 ) : item.action ? (
-                  <button
-                    onClick={item.action}
-                    className="block w-full text-left px-4 py-2 hover:bg-blue-600 dark:hover:bg-gray-700 rounded transition"
-                  >
+                  <button onClick={item.action} className="nav-button">
                     {item.label}
                   </button>
                 ) : (
                   <Link
                     href={item.path}
-                    className={`block px-4 py-2 hover:bg-blue-700 dark:hover:bg-gray-700 rounded transition ${
-                      isActive ? "bg-blue-900 dark:bg-gray-800 font-semibold" : ""
-                    }`}
+                    className={`nav-button ${isActive ? "nav-active" : ""}`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
@@ -164,6 +149,11 @@ export default function Navbar() {
               </li>
             );
           })}
+
+          {/* Switch de Modo Oscuro */}
+          <div className="hidden md:block">
+            <ThemeSwitch />
+          </div>
         </ul>
       </div>
     </nav>

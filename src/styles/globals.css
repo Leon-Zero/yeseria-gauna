@@ -1,3 +1,88 @@
 @import "tailwindcss";
+@import "./nav";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* * {
+  outline: red dashed 1px;
+} */
+
+@theme {
+  /*  Primary  */
+  --color-primary-100: #e2f6ff;
+  --color-primary-200: #a0ddff;
+  --color-primary-300: #7cc3f4;
+  --color-primary-400: #66aad9;
+  --color-primary-500: #5994bd; /* main color */
+  --color-primary-600: #2f83bd;
+  --color-primary-700: #1074b9;
+  --color-primary-800: #0068ba;
+  --color-primary-900: #005bae;
+
+  /*  Secondary  */
+  --color-secondary-100: #c7dbf0;
+  --color-secondary-200: #8aaed6;
+  --color-secondary-300: #5f8bba;
+  --color-secondary-400: #4b6f96;
+  --color-secondary-500: #415973; /* main color */
+  --color-secondary-600: #2d435a;
+  --color-secondary-700: #1e3247;
+  --color-secondary-800: #142538;
+  --color-secondary-900: #0c1c2d;
+
+  /* Tertiary */
+  --color-tertiary-100: #d7ebf8; /* main color */
+  --color-tertiary-200: #75c8fe;
+  --color-tertiary-300: #01b3ff;
+  --color-tertiary-400: #009aff;
+  --color-tertiary-500: #007be4;
+
+  /* Background */
+  --color-bg-100: #f3f4f5; /* main color */
+  --color-bg-200: #c8cdd2;
+  --color-bg-300: #a1acb7;
+  --color-bg-400: #7f91a2;
+  --color-bg-500: #637990;
+
+  /* Border */
+  --color-border-100: #a9bccc;
+  --color-border-200: #6f899f;
+  --color-border-300: #536371; /* main color */
+  --color-border-400: #313e49;
+  --color-border-500: #1c262f;
+
+  /* Dark */
+  --color-dark-100: #282f31; /* main color */
+  --color-dark-200: #1c2426;
+  --color-dark-300: #131c1f;
+  --color-dark-400: #0c1619;
+  --color-dark-500: #071215;
+
+  /* Warm  */
+  --color-warm-100: #e7dcbc;
+  --color-warm-200: #bfb085;
+  --color-warm-300: #988a64;
+  --color-warm-400: #6f6854;
+  --color-warm-500: #544c37;
+  --color-warm-600: #403922;
+  --color-warm-700: #332b13;
+  --color-warm-800: #2a2107;
+  --color-warm-900: #241a00;
+
+  /* spacing / sizes */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Merriweather", serif;
+  --font-mono: "Fira Code", monospace;
+}

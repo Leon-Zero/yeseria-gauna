@@ -225,26 +225,28 @@ function App() {
           }
         />
         <Route
-  path="/acerca-de-nosotros"
-  element={
-    <div className="relative">
-      <Helmet>
-        <title>Acerca de Emanuel Gauna | Yesero, Pintor y Albañil</title>
-        <meta
-          name="description"
-          content="Conoce a Emanuel Gauna, yesero, pintor y albañil profesional con experiencia en microcemento, remodelaciones y trabajos de calidad en Buenos Aires y AMBA."
+          path="/acerca-de-nosotros"
+          element={
+            <div className="relative">
+              <Helmet>
+                <title>
+                  Acerca de Emanuel Gauna | Yesero, Pintor y Albañil
+                </title>
+                <meta
+                  name="description"
+                  content="Conoce a Emanuel Gauna, yesero, pintor y albañil profesional con experiencia en microcemento, remodelaciones y trabajos de calidad en Buenos Aires y AMBA."
+                />
+                <meta
+                  name="keywords"
+                  content="yesero, pintor, albañil, microcemento, remodelaciones, pintura, Buenos Aires, AMBA"
+                />
+              </Helmet>
+              <FondoLogo opacity={10} size="180px" />
+              <Acerca />
+            </div>
+          }
         />
-        <meta
-          name="keywords"
-          content="yesero, pintor, albañil, microcemento, remodelaciones, pintura, Buenos Aires, AMBA"
-        />
-      </Helmet>
-      <FondoLogo opacity={10} size="180px" />
-      <Acerca />
-    </div>
-  }
-/>
-<Route path="*" element={<NotFound />} /> 
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <ContactSection />
       <Footer />
