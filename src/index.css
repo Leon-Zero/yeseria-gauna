@@ -1,71 +1,66 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
-
-/* ============================
-   🎨 PALETA PERSONALIZADA
-   ============================ */
 @theme {
   /* === Main / Primary === */
-  --color-primary-100: #E2F6FF;
-  --color-primary-200: #A0DDFF;
-  --color-primary-300: #7CC3F4;
-  --color-primary-400: #66AAD9;
-  --color-primary-500: #5994BD; /* main color */
-  --color-primary-600: #2F83BD;
-  --color-primary-700: #1074B9;
-  --color-primary-800: #0068BA;
-  --color-primary-900: #005BAE;
+  --color-primary-100: #e2f6ff;
+  --color-primary-200: #a0ddff;
+  --color-primary-300: #7cc3f4;
+  --color-primary-400: #66aad9;
+  --color-primary-500: #5994bd; /* main color */
+  --color-primary-600: #2f83bd;
+  --color-primary-700: #1074b9;
+  --color-primary-800: #0068ba;
+  --color-primary-900: #005bae;
 
   /* === Secondary === */
-  --color-secondary-100: #C7DBF0;
-  --color-secondary-200: #8AAED6;
-  --color-secondary-300: #5F8BBA;
-  --color-secondary-400: #4B6F96;
+  --color-secondary-100: #c7dbf0;
+  --color-secondary-200: #8aaed6;
+  --color-secondary-300: #5f8bba;
+  --color-secondary-400: #4b6f96;
   --color-secondary-500: #415973; /* main color */
-  --color-secondary-600: #2D435A;
-  --color-secondary-700: #1E3247;
+  --color-secondary-600: #2d435a;
+  --color-secondary-700: #1e3247;
   --color-secondary-800: #142538;
-  --color-secondary-900: #0C1C2D;
+  --color-secondary-900: #0c1c2d;
 
   /* === Tertiary === */
-  --color-tertiary-100: #D7EBF8; /* main color */
-  --color-tertiary-200: #75C8FE;
-  --color-tertiary-300: #01B3FF;
-  --color-tertiary-400: #009AFF;
-  --color-tertiary-500: #007BE4;
+  --color-tertiary-100: #d7ebf8; /* main color */
+  --color-tertiary-200: #75c8fe;
+  --color-tertiary-300: #01b3ff;
+  --color-tertiary-400: #009aff;
+  --color-tertiary-500: #007be4;
 
   /* === Background === */
-  --color-bg-100: #F3F4F5; /* main color */
-  --color-bg-200: #C8CDD2;
-  --color-bg-300: #A1ACB7;
-  --color-bg-400: #7F91A2;
+  --color-bg-100: #f3f4f5; /* main color */
+  --color-bg-200: #c8cdd2;
+  --color-bg-300: #a1acb7;
+  --color-bg-400: #7f91a2;
   --color-bg-500: #637990;
 
   /* === Border === */
-  --color-border-100: #A9BCCC;
-  --color-border-200: #6F899F;
+  --color-border-100: #a9bccc;
+  --color-border-200: #6f899f;
   --color-border-300: #536371; /* main color */
-  --color-border-400: #313E49;
-  --color-border-500: #1C262F;
+  --color-border-400: #313e49;
+  --color-border-500: #1c262f;
 
   /* === Dark === */
-  --color-dark-100: #282F31; /* main color */
-  --color-dark-200: #1C2426;
-  --color-dark-300: #131C1F;
-  --color-dark-400: #0C1619;
+  --color-dark-100: #282f31; /* main color */
+  --color-dark-200: #1c2426;
+  --color-dark-300: #131c1f;
+  --color-dark-400: #0c1619;
   --color-dark-500: #071215;
 
   /* === Warm / Complementary === */
-  --color-warm-100: #E7DCBC;
-  --color-warm-200: #BFB085;
-  --color-warm-300: #988A64;
-  --color-warm-400: #6F6854;
-  --color-warm-500: #544C37;
+  --color-warm-100: #e7dcbc;
+  --color-warm-200: #bfb085;
+  --color-warm-300: #988a64;
+  --color-warm-400: #6f6854;
+  --color-warm-500: #544c37;
   --color-warm-600: #403922;
-  --color-warm-700: #332B13;
-  --color-warm-800: #2A2107;
-  --color-warm-900: #241A00;
+  --color-warm-700: #332b13;
+  --color-warm-800: #2a2107;
+  --color-warm-900: #241a00;
 
   /* === Tokens base === */
   --radius-sm: 0.25rem;
@@ -95,3 +90,4 @@ utility ejemplo de uso
 @utility .btn-primary {
   @apply bg-[--color-primary-500] text-white hover:bg-[--color-primary-700];
 }
+*/
