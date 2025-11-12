@@ -4,10 +4,12 @@
 @import "./contact";
 @import "./stickybtn";
 @import "./gallery";
+@import "./bigbanner";
+@import "./home";
 
 @custom-variant dark (&:where(.dark, .dark *));
-/* 
-* {
+
+/* * {
   outline: red dashed 1px;
 } */
 
