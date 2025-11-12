@@ -7,10 +7,9 @@
     color: var(--color-bg-100);
     height: calc(var(--spacing-lg) * 3);
     box-shadow: 0 1px 10px var(--color-dark-100);
-  }
-
-  .dark .nav {
-    background-color: var(--color-dark-200);
+    @variant dark {
+      background-color: var(--color-dark-200);
+    }
   }
 
   .nav-container {
@@ -29,14 +28,16 @@
   .nav-link {
     @apply text-2xl font-bold transition;
     color: var(--color-bg-100);
-  }
-
-  .nav-link:hover {
-    color: var(--color-primary-300);
+    @variant hover {
+      color: var(--color-primary-300);
+    }
   }
 
   .nav-menu {
     @apply md:flex md:items-center md:gap-4 absolute md:static w-full md:w-auto left-0 md:left-auto transition-all duration-300;
+    @variant dark {
+      background-color: var(--color-dark-200);
+    }
   }
 
   .nav-item {
@@ -48,23 +49,20 @@
     @apply w-full text-left px-4 py-2 rounded flex justify-between items-center transition;
     background-color: transparent;
     color: var(--color-bg-100);
-  }
-
-  .nav-button:hover {
-    background-color: var(--color-primary-400);
-  }
-
-  .dark .nav-button:hover {
-    background-color: var(--color-dark-300);
+    @variant hover {
+      background-color: var(--color-primary-400);
+      @variant dark {
+        background-color: var(--color-dark-300);
+      }
+    }
   }
 
   .nav-submenu {
     @apply hidden md:absolute md:top-full md:left-0 md:shadow-lg md:rounded;
     background-color: var(--color-primary-900);
-  }
-
-  .dark .nav-submenu {
-    background-color: var(--color-dark-300);
+    @variant dark {
+      background-color: var(--color-dark-300);
+    }
   }
 
   .nav-item:hover .nav-submenu {
@@ -74,36 +72,33 @@
   .nav-submenu li a {
     @apply block px-4 py-2 rounded transition;
     color: var(--color-bg-100);
+    @variant hover {
+      background-color: var(--color-primary-500);
+      @variant dark {
+        background-color: var(--color-dark-100);
+      }
+    }
   }
 
-  .nav-submenu li a:hover {
-    background-color: var(--color-primary-500);
-  }
-
-  .dark .nav-submenu li a:hover {
-    background-color: var(--color-dark-200);
-  }
+  /* movil responsive */
 
   .nav-submenu-mobile {
     @apply md:hidden w-full shadow-lg rounded;
     background-color: var(--color-primary-600);
-  }
-
-  .dark .nav-submenu-mobile {
-    background-color: var(--color-dark-300);
+    @variant dark {
+      background-color: var(--color-dark-300);
+    }
   }
 
   .nav-subitem {
     @apply block px-6 py-2 rounded transition;
     color: var(--color-bg-100);
-  }
-
-  .nav-subitem:hover {
-    background-color: var(--color-primary-500);
-  }
-
-  .dark .nav-subitem:hover {
-    background-color: var(--color-dark-200);
+    @variant hover {
+      background-color: var(--color-primary-500);
+      @variant dark {
+        background-color: var(--color-dark-100);
+      }
+    }
   }
 
   .btn-toggle {
@@ -114,9 +109,8 @@
   .nav-active {
     background-color: var(--color-primary-800);
     font-weight: 600;
-  }
-
-  .dark .nav-active {
-    background-color: var(--color-dark-300);
+    @variant dark {
+      background-color: var(--color-dark-300);
+    }
   }
 }
