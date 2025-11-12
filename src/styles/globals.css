@@ -7,9 +7,9 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* * {
+* {
   outline: red dashed 1px;
-} */
+}
 body {
   background-color: var(--color-bg-100);
 }
