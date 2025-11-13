@@ -5,7 +5,7 @@
     @apply sticky top-0 z-50 transition-colors duration-300 grid place-items-center;
     background-color: var(--color-primary-600);
     color: var(--color-bg-100);
-    height: calc(var(--spacing-lg) * 3);
+    height: calc(var(--spacing-lg) * 2.5);
     box-shadow: 0 1px 10px var(--color-dark-100);
     @variant dark {
       background-color: var(--color-dark-200);
@@ -13,16 +13,17 @@
   }
 
   .nav-container {
-    @apply container max-w-full flex justify-between items-center h-full px-10;
+    @apply container max-w-full flex justify-between align-middle h-full px-8;
   }
 
   .nav-logo {
-    @apply flex items-center gap-2 h-full;
+    @apply grid items-center h-full;
+    flex: 0 0 9rem;
   }
 
   .nav-img {
-    @apply w-14 object-contain rounded-full border;
-    border-color: var(--color-border-300);
+    @apply w-full h-full object-contain;
+    filter: brightness(200%);
   }
 
   .nav-link {
@@ -34,7 +35,7 @@
   }
 
   .nav-menu {
-    @apply md:flex md:items-center md:gap-4 absolute md:static w-full md:w-auto left-0 md:left-auto transition-all duration-300;
+    @apply md:flex md:items-center md:gap-1 absolute md:static w-full md:w-auto left-0 md:left-auto transition-all duration-300;
     @variant dark {
       background-color: var(--color-dark-200);
     }

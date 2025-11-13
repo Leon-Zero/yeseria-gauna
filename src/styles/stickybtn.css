@@ -6,12 +6,11 @@
 
   /* Botón base */
   .sticky-btn {
-    @apply flex items-center gap-3 rounded-full shadow-lg overflow-hidden transition-all duration-300 cursor-pointer text-sm sm:text-base;
+    @apply flex flex-row items-center p-3 gap-2 rounded-full shadow-lg overflow-hidden transition-all duration-300 cursor-pointer text-sm sm:text-base;
     background-color: var(--color-primary-600);
     color: var(--color-bg-100);
-    width: 4rem;
-    height: 4rem;
-    padding: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
     &:hover {
       width: 20rem;
       background-color: var(--color-primary-500);

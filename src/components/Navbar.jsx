@@ -63,14 +63,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="nav-logo">
           <Link href="/">
-            <img
-              src="/yesero.jpg"
-              alt="Logo Yesería Gauna"
-              className="nav-img"
-            />
-          </Link>
-          <Link href="/" className="nav-link">
-            Inicio
+            <img src="/logo.png" alt="Logo Yesería Gauna" className="nav-img" />
           </Link>
         </div>
 

@@ -1,6 +1,6 @@
 @layer components {
   .banner-section {
-    @apply py-12 px-6 text-center transition-colors duration-300;
+    @apply py-4 px-6 text-center transition-colors duration-300;
     background-color: var(--color-secondary-100);
     color: var(--color-dark-400);
     @variant dark {
@@ -13,7 +13,7 @@
   }
 
   .banner-title {
-    @apply text-3xl font-bold mb-4;
+    @apply text-3xl font-bold mb-2;
     color: var(--color-dark-500);
     @variant dark {
       color: var(--color-primary-200);
@@ -29,7 +29,7 @@
   }
 
   .banner-button {
-    @apply inline-flex items-center justify-center font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-200;
+    @apply inline-flex w-full text-2xl items-center justify-center font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-200;
     background-color: var(--color-primary-600);
     color: var(--color-bg-100);
     @variant hover {
