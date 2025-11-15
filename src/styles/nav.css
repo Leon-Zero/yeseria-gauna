@@ -13,17 +13,16 @@
   }
 
   .nav-container {
-    @apply container max-w-full flex justify-between align-middle h-full px-8;
+    @apply container max-w-full flex justify-between align-middle px-8;
   }
 
   .nav-logo {
-    @apply grid items-center h-full;
+    @apply grid items-center;
     flex: 0 0 9rem;
   }
 
   .nav-img {
-    @apply w-full h-full object-contain;
-    filter: brightness(200%);
+    @apply w-full object-cover brightness-200 contrast-200;
   }
 
   .nav-link {
@@ -36,6 +35,8 @@
 
   .nav-menu {
     @apply md:flex md:items-center md:gap-1 absolute md:static w-full md:w-auto left-0 md:left-auto transition-all duration-300;
+    background-color: var(--color-primary-600);
+
     @variant dark {
       background-color: var(--color-dark-200);
     }
@@ -67,15 +68,14 @@
     @variant dark {
       background-color: var(--color-dark-300);
     }
-  }
-
-  .nav-submenu li a {
-    @apply block px-4 py-2 rounded transition;
-    color: var(--color-bg-100);
-    @variant hover {
-      background-color: var(--color-primary-500);
-      @variant dark {
-        background-color: var(--color-dark-100);
+    & li a {
+      @apply block px-4 py-2 rounded transition;
+      color: var(--color-bg-100);
+      @variant hover {
+        background-color: var(--color-primary-500);
+        @variant dark {
+          background-color: var(--color-dark-100);
+        }
       }
     }
   }

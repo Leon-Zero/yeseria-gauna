@@ -9,9 +9,9 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-* {
+/* * {
   outline: red dashed 1px;
-}
+} */
 /* html {
   font-size: clamp(0.5rem, 0.2471rem + 0.9412vw, 1rem);
 } */
