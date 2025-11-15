@@ -44,6 +44,9 @@
   .nav-item {
     @apply relative md:mx-2 border-b rounded-lg md:border-none;
     border-color: var(--color-border-300);
+    &:hover .nav-submenu {
+      @apply md:block;
+    }
   }
 
   .nav-button {
@@ -64,10 +67,6 @@
     @variant dark {
       background-color: var(--color-dark-300);
     }
-  }
-
-  .nav-item:hover .nav-submenu {
-    @apply md:block;
   }
 
   .nav-submenu li a {

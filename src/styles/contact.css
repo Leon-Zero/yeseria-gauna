@@ -5,11 +5,10 @@
     @apply py-12 px-6 relative z-20 transition-colors duration-300;
     background-color: var(--color-primary-600);
     color: var(--color-bg-100);
-  }
-
-  .dark .contact-section {
-    background-color: var(--color-dark-200);
-    color: var(--color-primary-100);
+    @variant dark {
+      background-color: var(--color-dark-200);
+      color: var(--color-primary-100);
+    }
   }
 
   .contact-container {
@@ -24,28 +23,25 @@
   .contact-title {
     @apply text-4xl font-bold mb-4;
     color: var(--color-bg-100);
-  }
-
-  .dark .contact-title {
-    color: var(--color-primary-100);
+    @variant dark {
+      color: var(--color-primary-100);
+    }
   }
 
   .contact-desc {
     @apply mb-6;
     color: var(--color-bg-200);
-  }
-
-  .dark .contact-desc {
-    color: var(--color-primary-200);
+    @variant dark {
+      color: var(--color-primary-200);
+    }
   }
 
   .contact-note {
     @apply mt-6 text-sm leading-relaxed;
     color: var(--color-bg-200);
-  }
-
-  .dark .contact-note {
-    color: var(--color-primary-200);
+    @variant dark {
+      color: var(--color-primary-200);
+    }
   }
 
   /* redes sociales */
@@ -56,20 +52,10 @@
   .contact-subtitle {
     @apply text-4xl font-semibold mb-4 text-center;
     color: var(--color-bg-100);
+    @variant dark {
+      color: var(--color-primary-100);
+    }
   }
-
-  .dark .contact-subtitle {
-    color: var(--color-primary-100);
-  }
-
-  /* .contact-follow {
-    @apply mb-2 text-3xl;
-    color: var(--color-bg-200);
-  }
-
-  .dark .contact-follow {
-    color: var(--color-primary-200);
-  } */
 
   .contact-list {
     @apply flex flex-col gap-6 text-5xl;
@@ -78,22 +64,19 @@
   .contact-item {
     @apply flex items-center gap-3 transition-colors text-3xl;
     color: var(--color-bg-100);
-  }
-
-  .contact-item:hover {
-    color: var(--color-dark-100);
-  }
-
-  .dark .contact-item:hover {
-    color: var(--color-primary-400);
-    text-shadow: 1px 0 1px var(--color-secundary-100);
+    @variant hover {
+      color: var(--color-dark-100);
+      @variant dark {
+        color: var(--color-primary-400);
+        text-shadow: 1px 0 1px var(--color-secundary-100);
+      }
+    }
+    &:hover .contact-icon {
+      @apply scale-110;
+    }
   }
 
   .contact-icon {
     @apply text-3xl transition-transform duration-300;
-  }
-
-  .contact-item:hover .contact-icon {
-    @apply scale-110;
   }
 }

@@ -11,18 +11,20 @@
     color: var(--color-bg-100);
     width: 3.5rem;
     height: 3.5rem;
-    &:hover {
+    @variant hover {
       width: 20rem;
       background-color: var(--color-primary-500);
       box-shadow: 0 0 12px var(--color-primary-300);
+      & .sticky-icon {
+        @apply scale-110;
+      }
     }
-  }
-
-  .dark .sticky-btn {
-    background-color: var(--color-dark-100);
-    &:hover {
-      background-color: var(--color-dark-200);
-      box-shadow: 0 0 12px var(--color-primary-400);
+    @variant dark {
+      background-color: var(--color-dark-100);
+      @variant hover {
+        background-color: var(--color-dark-200);
+        box-shadow: 0 0 12px var(--color-primary-400);
+      }
     }
   }
 
@@ -31,18 +33,17 @@
     @apply text-2xl shrink-0 transition-transform duration-300;
   }
 
-  .sticky-btn:hover .sticky-icon {
+  /* .sticky-btn:hover .sticky-icon {
     @apply scale-110;
-  }
+  } */
 
   /* Texto */
   .sticky-text {
     @apply opacity-0 translate-x-3 whitespace-nowrap transition-all duration-300;
     color: var(--color-dark-300);
-  }
-
-  .dark .sticky-text {
-    color: var(--color-primary-100);
+    @variant dark {
+      color: var(--color-primary-100);
+    }
   }
 
   .sticky-btn:hover .sticky-text {

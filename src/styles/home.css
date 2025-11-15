@@ -2,10 +2,9 @@
   .home-section {
     @apply grid grid-cols-12 gap-4 py-12 px-6 transition-colors duration-300;
     background-color: var(--color-bg-100);
-  }
-
-  .dark .home-section {
-    background-color: var(--color-dark-400);
+    @variant dark {
+      background-color: var(--color-dark-400);
+    }
   }
 
   .home-header {
@@ -15,19 +14,17 @@
   .home-title {
     @apply text-4xl md:text-5xl font-bold mb-4;
     color: var(--color-primary-700);
-  }
-
-  .dark .home-title {
-    color: var(--color-primary-300);
+    @variant dark {
+      color: var(--color-primary-300);
+    }
   }
 
   .home-subtitle {
     @apply text-lg md:text-xl;
     color: var(--color-secondary-500);
-  }
-
-  .dark .home-subtitle {
-    color: var(--color-primary-200);
+    @variant dark {
+      color: var(--color-primary-200);
+    }
   }
 
   .home-inner {
@@ -65,60 +62,48 @@
   .home-services-title {
     @apply text-2xl md:text-2xl font-bold text-center mb-4;
     color: var(--color-primary-700);
-  }
-
-  .dark .home-services-title {
-    color: var(--color-primary-300);
+    @variant dark {
+      color: var(--color-primary-300);
+    }
   }
 
   .home-services-text {
     @apply mb-4 leading-relaxed;
     color: var(--color-secondary-400);
-  }
-
-  .dark .home-services-text {
-    color: var(--color-primary-100);
-  }
-
-  .home-services-text strong {
-    color: var(--color-primary-600);
-  }
-
-  .dark .home-services-text strong {
-    color: var(--color-primary-300);
-  }
-
-  .home-services-text a {
-    @apply underline transition-colors duration-200;
-    color: var(--color-primary-700);
-  }
-
-  .home-services-text a:hover {
-    color: var(--color-primary-500);
-  }
-
-  .dark .home-services-text a {
-    color: var(--color-primary-300);
-  }
-
-  .dark .home-services-text a:hover {
-    color: var(--color-primary-200);
+    @variant dark {
+      color: var(--color-primary-100);
+    }
+    & strong {
+      color: var(--color-primary-600);
+      @variant dark {
+        color: var(--color-primary-300);
+      }
+    }
+    & a {
+      @apply underline transition-colors duration-200;
+      color: var(--color-primary-700);
+      @variant hover {
+        color: var(--color-primary-500);
+        @variant dark {
+          color: var(--color-primary-200);
+        }
+      }
+    }
   }
 
   /* columna de imagen */
   .home-image {
     @apply hidden relative z-0 rounded-lg overflow-hidden shadow-lg;
     height: 100%;
+    & img {
+      @apply w-full h-full object-cover;
+      display: block;
+    }
   }
 
   @media (min-width: 900px) {
     .home-image {
       @apply block;
     }
-  }
-
-  .home-image img {
-    @apply w-full h-full object-cover;
-    display: block;
   }
 }
