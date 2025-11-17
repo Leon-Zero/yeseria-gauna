@@ -139,7 +139,7 @@ export default function Gallery() {
             }}
           >
             <SwiperSlide>
-              <a href="/pintura-interior" className="gallery-card">
+              <a href="/interior" className="gallery-card">
                 <div className="gallery-image">
                   <img
                     src="/pinturaImg/interior1.jpg"
@@ -153,7 +153,7 @@ export default function Gallery() {
               </a>
             </SwiperSlide>
             <SwiperSlide>
-              <a href="/pintura-exterior" className="gallery-card">
+              <a href="/exterior" className="gallery-card">
                 <div className="gallery-image">
                   <img
                     src="/pinturaImg/exterior1.jpg"
@@ -167,7 +167,7 @@ export default function Gallery() {
               </a>
             </SwiperSlide>
             <SwiperSlide>
-              <a href="/pintura-refacciones" className="gallery-card">
+              <a href="/refacciones" className="gallery-card">
                 <div className="gallery-image">
                   <img
                     src="/pinturaImg/refaccion1.jpg"

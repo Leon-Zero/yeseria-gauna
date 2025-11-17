@@ -48,9 +48,9 @@ export default function Navbar() {
       label: "Pintura",
       path: null,
       sub: [
-        { label: "Interior", path: "/pintura-interior" },
-        { label: "Exterior", path: "/pintura-exterior" },
-        { label: "Refacciones", path: "/pintura-refacciones" },
+        { label: "Interior", path: "/interior" },
+        { label: "Exterior", path: "/exterior" },
+        { label: "Refacciones", path: "/refacciones" },
       ],
     },
     { label: "Acerca de Nosotros", path: "/acerca-de-nosotros", sub: [] },
