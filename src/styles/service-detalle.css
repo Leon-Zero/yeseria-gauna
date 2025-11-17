@@ -1,0 +1,79 @@
+@layer components {
+  .servicio-section {
+    @apply grid grid-cols-12 min-h-screen w-full py-12 transition-colors duration-300;
+    background-color: var(--color-bg-100);
+    @variant dark {
+      background-color: var(--color-dark-300);
+    }
+  }
+
+  .servicio-container {
+    @apply w-full col-span-12 mx-auto px-4 lg:col-start-2 lg:col-end-12 lg:px-2;
+  }
+
+  .servicio-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-4 transition-colors duration-200;
+    color: var(--color-primary-700);
+    @variant dark {
+      color: var(--color-primary-300);
+    }
+  }
+
+  .servicio-description {
+    @apply text-base text-center mx-auto max-w-3xl mb-6 transition-colors duration-200;
+    color: var(--color-border-500);
+
+    @variant dark {
+      color: var(--color-bg-200);
+    }
+  }
+
+  .servicio-gallery {
+    @apply grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .servicio-card {
+    @apply overflow-hidden rounded-md shadow-md transition-transform duration-200;
+    background-color: var(--color-bg-100);
+    box-shadow: 0 8px 18px rgba(7, 11, 14, 0.06);
+    @variant dark {
+      background-color: var(--color-dark-200);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+    }
+    &:hover .servicio-img {
+      @apply scale-105;
+    }
+  }
+
+  .servicio-img-wrapper {
+    @apply relative w-full overflow-hidden bg-gray-200;
+    padding-top: 56.25%;
+    @media (min-width: 640px) {
+      padding-top: calc(100% / (4 / 3));
+    }
+  }
+
+  .servicio-img {
+    @apply absolute inset-0 w-full h-full object-cover transition-transform duration-300 block;
+  }
+
+  .servicio-btn {
+    @apply text-center mt-8;
+  }
+
+  .btn-primary {
+    @apply w-[80%] inline-flex items-center justify-center font-semibold py-3 px-6 rounded-md transition;
+    background-color: var(--color-primary-600);
+    color: var(--color-bg-100);
+    @variant hover {
+      background-color: var(--color-primary-400);
+    }
+    @variant dark {
+      background-color: var(--color-primary-400);
+      color: var(--color-dark-400);
+      @variant hover {
+        background-color: var(--color-primary-200);
+      }
+    }
+  }
+}

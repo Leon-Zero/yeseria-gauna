@@ -17,35 +17,32 @@ export default function ServicioDetalle({ slug }) {
   const { title, description, images } = data;
 
   return (
-    <section className="relative py-12 px-6 bg-gray-100 min-h-screen dark:bg-gray-900">
-      <h1 className="text-3xl font-bold mb-6 text-center relative z-10 text-primary">
-        {title}
-      </h1>
+    <section className="servicio-section">
+      <div className="servicio-container">
+        <h1 className="servicio-title">{title}</h1>
 
-      <p className="text-base text-center mb-8 max-w-3xl mx-auto relative z-10 text-content dark:text-content-dark">
-        {description}
-      </p>
+        <p className="servicio-description">{description}</p>
 
-      {/* Galería */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative z-10">
-        {images.map((src, idx) => (
-          <div key={idx} className="overflow-hidden rounded-lg shadow-lg">
-            <div className="relative w-full aspect-video sm:aspect-4/3">
-              <img
-                src={src}
-                alt={`${title} imagen ${idx + 1}`}
-                className="absolute top-0 left-0 w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-              />
+        <div className="servicio-gallery">
+          {images.map((src, idx) => (
+            <div key={idx} className="servicio-card">
+              <div className="servicio-img-wrapper">
+                <img
+                  src={src}
+                  alt={`${title} imagen ${idx + 1}`}
+                  className="servicio-img"
+                  loading="lazy"
+                />
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="text-center mt-8 relative z-10">
-        <a href="#contact-section" className="btn-primary">
-          Solicitar Presupuesto
-        </a>
+        <div className="servicio-btn">
+          <a href="#contact-section" className="btn-primary">
+            Solicitar Presupuesto
+          </a>
+        </div>
       </div>
     </section>
   );
