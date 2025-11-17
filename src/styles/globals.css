@@ -6,6 +6,7 @@
 @import "./gallery";
 @import "./bigbanner";
 @import "./home";
+@import "./banner-home";
 
 @custom-variant dark (&:where(.dark, .dark *));
 

@@ -24,16 +24,23 @@ export default function Revestimientos() {
       {/* Descripción ampliada */}
       <div className="text-gray-700 mb-6 text-center max-w-3xl mx-auto relative z-10 space-y-4  dark:text-gray-300">
         <p>
-          Ofrecemos <strong>colocación de cerámicas, pisos de microcemento, revoques y revestimientos exteriores</strong>
-          en todo tipo de espacios, garantizando acabados duraderos y estéticamente impecables.
+          Ofrecemos{" "}
+          <strong>
+            colocación de cerámicas, pisos de microcemento, revoques y
+            revestimientos exteriores
+          </strong>
+          en todo tipo de espacios, garantizando acabados duraderos y
+          estéticamente impecables.
         </p>
         <p>
-          Incluye preparación de superficies, nivelación, sellado y terminación profesional para proyectos
-          residenciales, comerciales e industriales en Buenos Aires y AMBA.
+          Incluye preparación de superficies, nivelación, sellado y terminación
+          profesional para proyectos residenciales, comerciales e industriales
+          en Buenos Aires y AMBA.
         </p>
         <p>
-          Nuestro equipo asegura resultados de alta calidad, adaptándose a cada proyecto y ofreciendo soluciones personalizadas.
-          Contactanos para un presupuesto sin compromiso y llevá tus espacios al siguiente nivel.
+          Nuestro equipo asegura resultados de alta calidad, adaptándose a cada
+          proyecto y ofreciendo soluciones personalizadas. Contactanos para un
+          presupuesto sin compromiso y llevá tus espacios al siguiente nivel.
         </p>
       </div>
 
@@ -41,10 +48,12 @@ export default function Revestimientos() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative z-10">
         {images.map((src, idx) => (
           <div key={idx} className="overflow-hidden rounded-lg shadow-lg">
-            <div className="relative w-full aspect-[16/9] sm:aspect-[4/3]">
+            <div className="relative w-full aspect-video sm:aspect-4/3">
               <img
                 src={src}
-                alt={`Proyecto de revestimientos en Buenos Aires y AMBA - proyecto ${idx + 1}`}
+                alt={`Proyecto de revestimientos en Buenos Aires y AMBA - proyecto ${
+                  idx + 1
+                }`}
                 className="absolute top-0 left-0 w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
                 loading="lazy"
                 width="1200"

@@ -18,9 +18,18 @@ export default function VideoSection() {
     { type: "tiktok", src: "https://www.tiktok.com/embed/7539544687326137605" },
     { type: "tiktok", src: "https://www.tiktok.com/embed/7526338348584094982" },
     { type: "tiktok", src: "https://www.tiktok.com/embed/7526968549848534277" },
-    { type: "instagram", src: "https://www.instagram.com/reel/DMu4FlBMdqn/embed" },
-    { type: "instagram", src: "https://www.instagram.com/reel/DNa-2z_ts2n/embed" },
-    { type: "instagram", src: "https://www.instagram.com/reel/DMREvoDMpck/embed" },
+    {
+      type: "instagram",
+      src: "https://www.instagram.com/reel/DMu4FlBMdqn/embed",
+    },
+    {
+      type: "instagram",
+      src: "https://www.instagram.com/reel/DNa-2z_ts2n/embed",
+    },
+    {
+      type: "instagram",
+      src: "https://www.instagram.com/reel/DMREvoDMpck/embed",
+    },
   ];
 
   const openModal = (src) => {
@@ -31,7 +40,7 @@ export default function VideoSection() {
     <section className="my-8 relative z-20 max-w-full px-4">
       {/* Banner horizontal con logos */}
       <div
-        className="flex items-center justify-center gap-6 p-6 rounded-xl shadow-lg cursor-pointer bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white"
+        className="flex items-center justify-center gap-6 p-6 rounded-xl shadow-lg cursor-pointer bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white"
         onClick={() => setOpen(!open)}
       >
         <FaTiktok className="w-8 h-8" />
@@ -49,7 +58,7 @@ export default function VideoSection() {
             <div
               key={i}
               className={`relative w-full ${
-                video.type === "tiktok" ? "aspect-[9/16]" : "aspect-square"
+                video.type === "tiktok" ? "aspect-video" : "aspect-square"
               } bg-gray-200 rounded-xl overflow-hidden shadow-md cursor-pointer`}
               onClick={() => openModal(video.src)}
             >

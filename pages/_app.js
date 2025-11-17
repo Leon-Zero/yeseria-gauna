@@ -2,7 +2,6 @@ import Navbar from "../src/components/Navbar";
 import StickyButtons from "../src/components/StickyButtons";
 import ContactSection from "../src/components/ContactSection";
 import Footer from "../src/components/Footer";
-import FondoLogo from "../src/components/FondoLogo";
 import "../src/styles/globals.css";
 import { Inter } from "next/font/google";
 import TopBanner from "../src/components/TopBanner";
@@ -15,7 +14,6 @@ export default function MyApp({ Component, pageProps }) {
       <div className="relative">
         <Navbar />
         <TopBanner />
-        <FondoLogo opacity={10} size="180px" />
         <StickyButtons />
 
         {/* Cada página maneja su propio SEO con SeoHead */}

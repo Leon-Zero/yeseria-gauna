@@ -21,16 +21,21 @@ export default function Paredes() {
         Aplicado y Refacción de Paredes
       </h1>
       <p className="text-center text-gray-700 mb-8 max-w-3xl mx-auto relative z-10 dark:text-gray-300">
-        Realizamos <strong>aplicado de yeso en paredes</strong> de todo tipo de ambientes, interiores y exteriores, asegurando un acabado liso, uniforme y profesional.
-        También ofrecemos <strong>refacciones y reparación de paredes existentes</strong>, corrigiendo imperfecciones, grietas y daños estructurales, con resultados duraderos y estéticamente impecables.
-        Más de 15 años de experiencia en remodelaciones y trabajos de interiorismo en Buenos Aires y AMBA.
+        Realizamos <strong>aplicado de yeso en paredes</strong> de todo tipo de
+        ambientes, interiores y exteriores, asegurando un acabado liso, uniforme
+        y profesional. También ofrecemos{" "}
+        <strong>refacciones y reparación de paredes existentes</strong>,
+        corrigiendo imperfecciones, grietas y daños estructurales, con
+        resultados duraderos y estéticamente impecables. Más de 15 años de
+        experiencia en remodelaciones y trabajos de interiorismo en Buenos Aires
+        y AMBA.
       </p>
 
       {/* Galería de imágenes */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative z-10">
         {images.map((src, idx) => (
           <div key={idx} className="overflow-hidden rounded-lg shadow-lg">
-            <div className="relative w-full aspect-[16/9] sm:aspect-[4/3]">
+            <div className="relative w-full aspect-video sm:aspect-4/3">
               <img
                 src={src}
                 alt={`Proyecto de Paredes com Yeso ${idx + 1}`}

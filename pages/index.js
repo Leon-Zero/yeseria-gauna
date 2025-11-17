@@ -1,14 +1,15 @@
 import { useEffect } from "react";
 import SeoHead from "../src/components/SeoHead";
 import StickyButtons from "../src/components/StickyButtons";
-import FondoLogo from "../src/components/FondoLogo";
 import Home from "../src/components/Home";
 import Gallery from "../src/components/Gallery";
 import Comments from "../src/components/comments/Comments.jsx";
+import BannerHome from "../src/components/BannerHome.jsx";
 
 export default function HomePage() {
   // --- Datos SEO principales ---
-  const pageTitle = "Yesería, Pintura y Reformas | Emanuel Gauna - Buenos Aires y AMBA";
+  const pageTitle =
+    "Yesería, Pintura y Reformas | Emanuel Gauna - Buenos Aires y AMBA";
   const pageDescription =
     "Emanuel Gauna, yesero profesional en Buenos Aires y AMBA. Servicios de yesería, drywall, pintura, microcemento y reformas integrales. Presupuestos sin cargo. Tel: 11 6437-1277.";
   const pageKeywords =
@@ -48,9 +49,9 @@ export default function HomePage() {
       />
 
       <main className="min-h-screen">
+        <BannerHome />
         <Home />
         <Gallery />
-        <FondoLogo />
         <Comments />
       </main>
 

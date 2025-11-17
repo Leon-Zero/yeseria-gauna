@@ -18,22 +18,29 @@ export default function Microcemento() {
 
       {/* Título optimizado */}
       <h1 className="text-3xl font-bold text-blue-700 mb-6 text-center relative z-10">
-        Microcemento Profesional para Interiores y Exteriores en Buenos Aires y AMBA
+        Microcemento Profesional para Interiores y Exteriores en Buenos Aires y
+        AMBA
       </h1>
 
       {/* Descripción ampliada */}
       <div className="text-gray-700 mb-6 text-center max-w-3xl mx-auto relative z-10 space-y-4  dark:text-gray-300">
         <p>
-          Ofrecemos <strong>aplicación profesional de microcemento</strong> en pisos, paredes y otras superficies.
-          Ideal para remodelaciones, revestimientos de baños, cocinas, locales comerciales y proyectos residenciales.
+          Ofrecemos <strong>aplicación profesional de microcemento</strong> en
+          pisos, paredes y otras superficies. Ideal para remodelaciones,
+          revestimientos de baños, cocinas, locales comerciales y proyectos
+          residenciales.
         </p>
         <p>
-          Este material proporciona <strong>acabados modernos, decorativos y resistentes al uso diario</strong>,
-          combinando estética y durabilidad en cada proyecto.
+          Este material proporciona{" "}
+          <strong>
+            acabados modernos, decorativos y resistentes al uso diario
+          </strong>
+          , combinando estética y durabilidad en cada proyecto.
         </p>
         <p>
-          Trabajamos en Buenos Aires y AMBA, aplicando técnicas especializadas para garantizar resultados uniformes,
-          duraderos y estéticamente impecables. Contactanos para un presupuesto personalizado.
+          Trabajamos en Buenos Aires y AMBA, aplicando técnicas especializadas
+          para garantizar resultados uniformes, duraderos y estéticamente
+          impecables. Contactanos para un presupuesto personalizado.
         </p>
       </div>
 
@@ -41,10 +48,12 @@ export default function Microcemento() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 relative z-10">
         {images.map((src, idx) => (
           <div key={idx} className="overflow-hidden rounded-lg shadow-lg">
-            <div className="relative w-full aspect-[16/9] sm:aspect-[4/3]">
+            <div className="relative w-full aspect-video sm:aspect-4/3">
               <img
                 src={src}
-                alt={`Proyecto de microcemento en Buenos Aires y AMBA - proyecto ${idx + 1}`}
+                alt={`Proyecto de microcemento en Buenos Aires y AMBA - proyecto ${
+                  idx + 1
+                }`}
                 className="w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
                 loading="lazy"
                 width="1200"

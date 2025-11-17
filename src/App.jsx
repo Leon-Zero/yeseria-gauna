@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import Home from "./components/Home";
+import BannerHome from "./components/BannerHome";
 import Gallery from "./components/Gallery";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -67,7 +68,7 @@ function App() {
                   content="Servicios de Yesería, Albañilería y Pintura en Buenos Aires. Armado de cielorrasos, molduras, microcemento, revestimientos y pintura de interiores y exteriores."
                 />
               </Helmet>
-              <FondoLogo opacity={10} size="180px" />
+              <BannerHome></BannerHome>
               <Home />
               <Gallery />
               <StickyButtons />

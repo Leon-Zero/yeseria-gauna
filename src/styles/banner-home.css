@@ -1,0 +1,30 @@
+@layer components {
+  .banner {
+    @apply w-full aspect-video relative overflow-hidden;
+    filter: drop-shadow(0 2px 6px var(--color-dark-300));
+    @variant dark {
+      background-color: var(--color-dark-300);
+    }
+  }
+
+  .banner-img {
+    @apply w-full h-full object-cover absolute top-0 left-0;
+  }
+
+  /* modo claro */
+  .banner-light {
+    @apply block;
+    @variant dark {
+      @apply hidden;
+    }
+  }
+
+  /* modo oscuro */
+  .banner-dark {
+    @apply hidden;
+    @variant dark {
+      @apply block;
+      filter: drop-shadow(-4px -1px 4px var(--color-bg-500));
+    }
+  }
+}

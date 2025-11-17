@@ -13,6 +13,7 @@
 .gallery-title {
   @apply text-3xl font-bold mb-6 text-center transition-colors duration-200;
   color: var(--color-primary-600);
+  text-transform: uppercase;
   @variant dark {
     color: var(--color-primary-400);
   }
