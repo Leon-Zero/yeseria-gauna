@@ -9,7 +9,6 @@ export default function ServicioPage({ slug }) {
       <main className="min-h-screen">
         <ServicioDetalle slug={slug} />
       </main>
-      <StickyButtons />
     </>
   );
 }

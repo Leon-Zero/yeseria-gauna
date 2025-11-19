@@ -1,0 +1,72 @@
+@layer components {
+  .services-section {
+    @apply w-full h-full py-10 px-6;
+    @variant dark {
+      background-color: var(--color-dark-200);
+    }
+  }
+
+  .title {
+    @apply text-3xl font-bold mb-6 text-center transition-colors duration-200;
+    color: var(--color-primary-600);
+    text-transform: uppercase;
+    @variant dark {
+      color: var(--color-primary-400);
+    }
+  }
+
+  .services-container {
+    @apply w-[90%] mx-auto h-full flex flex-wrap justify-evenly items-center gap-8;
+  }
+
+  .service-card {
+    @apply flex flex-col items-center justify-evenly cursor-pointer transition-all duration-200 ease-in-out border-4 p-4;
+    border-color: var(--color-primary-400);
+    flex: 0 0 16rem;
+    aspect-ratio: 7/9;
+    @variant dark {
+      @apply text-primary-100;
+      background-color: var(--color-dark-100);
+      border-color: var(--color-primary-200);
+    }
+    @variant hover {
+      box-shadow: 1px -1px 12px var(--color-border-500),
+        -1px 1px 12px var(--color-border-500);
+      transform: scale(1.1);
+    }
+  }
+
+  .service-card-img {
+    @apply h-[30%] w-full;
+  }
+
+  .service-card-img img {
+    @apply w-full h-full object-contain;
+    fill: var(--color-primary-400);
+  }
+
+  /* TEXTO */
+  .service-card-text {
+    @apply grid w-full text-center place-items-center gap-2 px-3;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto 1fr;
+  }
+
+  .service-card-title {
+    @apply text-xl font-bold text-primary-700;
+  }
+
+  .service-card-divider {
+    @apply block w-10 h-1 rounded-full bg-primary-500;
+    @variant dark {
+      @apply bg-primary-200;
+    }
+  }
+
+  .service-card-description {
+    @apply text-sm leading-relaxed px-2 text-secondary-600;
+    @variant dark {
+      color: var(--color-bg-200);
+    }
+  }
+}

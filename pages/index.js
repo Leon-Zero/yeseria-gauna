@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import SeoHead from "../src/components/SeoHead";
-import StickyButtons from "../src/components/StickyButtons";
 import Home from "../src/components/Home";
 import Gallery from "../src/components/Gallery";
 import Comments from "../src/components/comments/Comments.jsx";
 import BannerHome from "../src/components/BannerHome.jsx";
+import CardServices from "../src/components/CardServices.jsx";
 
 export default function HomePage() {
   // --- Datos SEO principales ---
@@ -51,11 +51,10 @@ export default function HomePage() {
       <main className="min-h-screen">
         <BannerHome />
         <Home />
+        <CardServices />
         <Gallery />
         <Comments />
       </main>
-
-      <StickyButtons />
     </>
   );
 }

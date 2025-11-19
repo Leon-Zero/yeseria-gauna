@@ -50,7 +50,6 @@ export default function Acerca() {
       <main className="min-h-screen">
         <AcercaComponent />
       </main>
-      <StickyButtons />
     </>
   );
 }

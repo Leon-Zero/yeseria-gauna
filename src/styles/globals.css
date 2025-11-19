@@ -9,6 +9,7 @@
 @import "./banner-home";
 @import "./service-detalle";
 @import "./acerca";
+@import "./card-services.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
